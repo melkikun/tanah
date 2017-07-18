@@ -83,8 +83,8 @@ class PropertyController extends Controller
             ]);
 
         if($validator->fails()){
-         return redirect(URL::previous()."#postcomment")->withInput()->withErrors($validator);
-     }else{
+           return redirect(URL::previous()."#postcomment")->withInput()->withErrors($validator);
+       }else{
         $content = array(
             "nama"=>$nama,
             "email"=>$email,
@@ -100,5 +100,9 @@ class PropertyController extends Controller
             return redirect(URL::previous()."#postcomment")->with(["email"=>1]);
         }
     }
+}
+
+public function testing($id){
+    echo "123";
 }
 }

@@ -21,12 +21,23 @@ class UsersTableSeeder extends Seeder
             array (
                 'id' => 1,
                 'name' => 'miko',
-                'username'=>'miko',
+                'username' => 'miko',
                 'email' => 'mikohendroc@gmail.com',
                 'password' => '$2y$10$L1FvWi9NdAvyy/96gb3/dOxas/RQm5uBYvWiecAwPGlK6xyA5Yt1m',
-                'remember_token' => '3XvNOnCvZjheFAzUcOEldobJKPZtBPLS0OYF6CzHPl8W4lR0lR4Fg2IJrfnq',
+                'remember_token' => 'lkWfTkdIsAkTleI4DGlZUWhyFlUvGkct3qlKefjbNTiZzGCuhyjnMDeVb9XP',
                 'created_at' => NULL,
                 'updated_at' => NULL,
+            ),
+            1 => 
+            array (
+                'id' => 2,
+                'name' => 'ahmad',
+                'username' => 'ahmad',
+                'email' => 'ahmad@weltes.co.id',
+                'password' => '$2y$10$k3sqJ6Is4S6PoThbUqNkp.TvWjy7BUfYLyaLLJsnCbQE.PFIS.NQu',
+                'remember_token' => 'MeghLGqrqu9f688QX2tvbU0PNMRl9w73JQnr6oMAbtgX5ZKhyDlc8JOgYCBf',
+                'created_at' => '2017-07-17 07:21:02',
+                'updated_at' => '2017-07-17 07:21:02',
             ),
         ));
         

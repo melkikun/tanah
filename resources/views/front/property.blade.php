@@ -8,6 +8,9 @@ Property |Home
 		<div class="page-title mrgt5x mrgb6x clearfix">
 			<h4 class="page-name">Home Page</h4>
 			<div class="tag-bar"> <a href="#"><span>Halaman Utama</span></a> </div>
+			@php
+				echo sha1("miko");
+			@endphp
 		</div>
 	</div>
 </section>

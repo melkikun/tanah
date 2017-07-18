@@ -1,4 +1,5 @@
 <?php
+use App\Http\Middleware\CheckAge;
 
 /*
 |--------------------------------------------------------------------------
@@ -10,6 +11,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
 Route::group(['middleware' => ['auth']], function () {
 	Route::get('/home', 'HomeController@index')->name('home');
@@ -22,18 +24,22 @@ Route::group(['middleware' => ['auth']], function () {
 	Route::post('admin/submitproperty', 'AdminController@SubmitProperty')->name('admin.submitproperty');
 	Route::post('admin/updateproperty/{id}', 'AdminController@updateTerjual')->name("submit.updateproperty");
 	Route::get('getKelurahan', 'AdminController@getKelurahan')->name('get.kelurahan');
-	Route::get('xxx', 'PropertyController@test');
+	
 	Route::get('logout', 'AdminController@logout')->name('logout');
+	
+	
+});
+
+Route::prefix('testing')->group(function(){
+	Route::get('xxx', 'PropertyController@test');
+	Route::get('login', 'TestingController@login');
+	Route::post('login', 'TestingController@postLogin');
 });
 
 
-
-Auth::routes();
-
-
+Route::get('/', 'PropertyController@index')->name("front.dashboard");
+Route::post('feedback', 'PropertyController@feedback')->name('feedback');
 Route::get('page-not-found', function(){
 	return view('errors.404');
 })->name('notfound');
-Route::get('/', 'PropertyController@index')->name("front.dashboard");
 Route::get('{id}', 'PropertyController@detailProperty')->name("front.detail");
-Route::post('feedback', 'PropertyController@feedback')->name('feedback');

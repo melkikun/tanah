@@ -38,11 +38,14 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+
+    /*digunakan untuk mengambil username dari daatabase*/
     public function username()
     {
         return 'username';
     }
 
+    /*melakukan check username dan email. fungsi ini bisa dipakai untuk login menggunakan email atau username. */
     protected function credentials(Request $request)
     {
         $usernameInput = trim($request->{$this->username()});

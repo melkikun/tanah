@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
+use Hash;
 class User extends Authenticatable
 {
     use Notifiable;
@@ -28,5 +28,11 @@ class User extends Authenticatable
     ];
 
     protected $primaryKey = "id";
+
+    // public function getAuthPassword()
+    // {
+
+    //     return md5($this->password);
+    // }
     
 }

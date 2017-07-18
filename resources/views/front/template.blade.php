@@ -39,7 +39,7 @@
 	<header>
 		<div class="container-fluid">
 			<div class="navigation clearfix">
-				<div class="logo"><a href="index.html"><img src="{{ asset('/') }}non-admin/images/logo-asli.jpg" alt="#"/> </a></div>
+				<div class="logo"><a href="{{ url('/') }}"><img src="{{ asset('/') }}non-admin/images/logo-asli.jpg" alt="#"/> </a></div>
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle"> 
 						<span class="sr-only">Toggle navigation</span> 
