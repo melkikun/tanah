@@ -9,5 +9,6 @@
 <input type="password" name="password">
 <input type="submit" name="submit">
 {!! Form::close() !!}
+@include('testing.footer')
 </body>
 </html>

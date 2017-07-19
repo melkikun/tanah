@@ -31,6 +31,7 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 Route::prefix('testing')->group(function(){
+	Route::get('', 'TestingController@index');
 	Route::get('xxx', 'PropertyController@test');
 	Route::get('login', 'TestingController@login');
 	Route::post('login', 'TestingController@postLogin');

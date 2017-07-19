@@ -10,6 +10,10 @@ class TestingController extends Controller
     function __construct(){
     }
 
+    function index(){
+        echo "123456";
+    }
+
     function login(Request $request){
     	return view('testing.login');
     }

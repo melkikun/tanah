@@ -29,12 +29,12 @@ class TestMail extends Mailable
      */
     public function build()
     {
-        $sender = $this->content['email'];
+        //$content digunakan untuk mengambil data dari class controller
         return $this
-        ->from($sender, $this->content['nama'])
-        ->subject($this->content['subject'])
-        ->replyTo($sender, $this->content['nama'])
-        ->view('front.emails')
+        ->from($this->content['email'], $this->content['nama']) //email from sender
+        ->subject($this->content['subject']) //untuk subjectnya
+        ->replyTo($this->content['email'], $this->content['nama']) //force replay email, jika tidak ada ini akan otomotis ke penyedia email
+        ->view('front.emails') //content dari email akan di tampilkan di halaman view
         ;
     }
 }
