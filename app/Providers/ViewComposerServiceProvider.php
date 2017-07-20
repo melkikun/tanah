@@ -5,7 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 
-class ComposerServiceProvider extends ServiceProvider
+class ViewComposerServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -15,11 +15,7 @@ class ComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-        View::composer('testing.footer', 'App\Http\ViewComposers\ProfileComposer');
-
-        // View::composer('dashboard', function($view){
-
-        // });
+        View::composer('testing.footer', 'App\Http\ViewComposers\FooterComposer');
     }
 
     /**

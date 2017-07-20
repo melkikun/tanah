@@ -173,10 +173,8 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
 
-        //seo javascript
-        Nutsweb\LaravelPrerender\LaravelPrerenderServiceProvider::class,
         //view composer
-        App\Providers\ComposerServiceProvider::class,
+        App\Providers\ViewComposerServiceProvider::class,
 
 
        
